@@ -6,7 +6,11 @@
  *
  * This content is released under the MIT License (MIT)
  *
+<<<<<<< HEAD
  * Copyright (c) 2014 - 2019, British Columbia Institute of Technology
+=======
+ * Copyright (c) 2019 - 2022, CodeIgniter Foundation
+>>>>>>> 4ac3e12faf0b0ddcad1091c595a68c1d1302375d
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -30,6 +34,10 @@
  * @author	EllisLab Dev Team
  * @copyright	Copyright (c) 2008 - 2014, EllisLab, Inc. (https://ellislab.com/)
  * @copyright	Copyright (c) 2014 - 2019, British Columbia Institute of Technology (https://bcit.ca/)
+<<<<<<< HEAD
+=======
+ * @copyright	Copyright (c) 2019 - 2022, CodeIgniter Foundation (https://codeigniter.com/)
+>>>>>>> 4ac3e12faf0b0ddcad1091c595a68c1d1302375d
  * @license	https://opensource.org/licenses/MIT	MIT License
  * @link	https://codeigniter.com
  * @since	Version 3.0.0
@@ -83,6 +91,16 @@ class CI_Cache_redis extends CI_Driver
 	 */
 	protected static $_delete_name;
 
+<<<<<<< HEAD
+=======
+	/**
+	 * sRem()/sRemove() method name depending on phpRedis version
+	 *
+	 * @var	string
+	 */
+	protected static $_sRemove_name;
+
+>>>>>>> 4ac3e12faf0b0ddcad1091c595a68c1d1302375d
 	// ------------------------------------------------------------------------
 
 	/**
@@ -104,9 +122,25 @@ class CI_Cache_redis extends CI_Driver
 			return;
 		}
 
+<<<<<<< HEAD
 		isset(static::$_delete_name) OR static::$_delete_name = version_compare(phpversion('phpredis'), '5', '>=')
 			? 'del'
 			: 'delete';
+=======
+		if ( ! isset(static::$_delete_name, static::$_sRemove_name))
+		{
+			if (version_compare(phpversion('redis'), '5', '>='))
+			{
+				static::$_delete_name  = 'del';
+				static::$_sRemove_name = 'sRem';
+			}
+			else
+			{
+				static::$_delete_name  = 'delete';
+				static::$_sRemove_name = 'sRemove';
+			}
+		}
+>>>>>>> 4ac3e12faf0b0ddcad1091c595a68c1d1302375d
 
 		$CI =& get_instance();
 
@@ -193,7 +227,11 @@ class CI_Cache_redis extends CI_Driver
 		}
 		else
 		{
+<<<<<<< HEAD
 			$this->_redis->sRemove('_ci_redis_serialized', $id);
+=======
+			$this->_redis->{static::$_sRemove_name}('_ci_redis_serialized', $id);
+>>>>>>> 4ac3e12faf0b0ddcad1091c595a68c1d1302375d
 		}
 
 		return $this->_redis->set($id, $data, $ttl);
@@ -214,7 +252,11 @@ class CI_Cache_redis extends CI_Driver
 			return FALSE;
 		}
 
+<<<<<<< HEAD
 		$this->_redis->sRemove('_ci_redis_serialized', $key);
+=======
+		$this->_redis->{static::$_sRemove_name}('_ci_redis_serialized', $key);
+>>>>>>> 4ac3e12faf0b0ddcad1091c595a68c1d1302375d
 
 		return TRUE;
 	}

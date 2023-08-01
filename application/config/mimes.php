@@ -5,7 +5,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | -------------------------------------------------------------------
 | MIME TYPES
 | -------------------------------------------------------------------
+<<<<<<< HEAD
 | This file contains an array of mime types.  It is used by the
+=======
+| This file contains an array of mime types. It is used by the
+>>>>>>> 4ac3e12faf0b0ddcad1091c595a68c1d1302375d
 | Upload class to help identify allowed file types.
 |
 */
@@ -85,9 +89,17 @@ return array(
 	'jpm'	=>	array('image/jp2', 'video/mj2', 'image/jpx', 'image/jpm'),
 	'mj2'	=>	array('image/jp2', 'video/mj2', 'image/jpx', 'image/jpm'),
 	'mjp2'	=>	array('image/jp2', 'video/mj2', 'image/jpx', 'image/jpm'),
+<<<<<<< HEAD
 	'png'	=>	array('image/png',  'image/x-png'),
 	'tiff'	=>	'image/tiff',
 	'tif'	=>	'image/tiff',
+=======
+	'png'	=>	array('image/png', 'image/x-png'),
+	'tiff'	=>	'image/tiff',
+	'tif'	=>	'image/tiff',
+	'heic' 	=>	'image/heic',
+	'heif' 	=>	'image/heif',
+>>>>>>> 4ac3e12faf0b0ddcad1091c595a68c1d1302375d
 	'css'	=>	array('text/css', 'text/plain'),
 	'html'	=>	array('text/html', 'text/plain'),
 	'htm'	=>	array('text/html', 'text/plain'),
@@ -160,7 +172,11 @@ return array(
 	'cdr'	=>	array('application/cdr', 'application/coreldraw', 'application/x-cdr', 'application/x-coreldraw', 'image/cdr', 'image/x-cdr', 'zz-application/zz-winassoc-cdr'),
 	'wma'	=>	array('audio/x-ms-wma', 'video/x-ms-asf'),
 	'jar'	=>	array('application/java-archive', 'application/x-java-application', 'application/x-jar', 'application/x-compressed'),
+<<<<<<< HEAD
 	'svg'	=>	array('image/svg+xml', 'application/xml', 'text/xml'),
+=======
+	'svg'	=>	array('image/svg+xml', 'image/svg', 'application/xml', 'text/xml'),
+>>>>>>> 4ac3e12faf0b0ddcad1091c595a68c1d1302375d
 	'vcf'	=>	'text/x-vcard',
 	'srt'	=>	array('text/srt', 'text/plain'),
 	'vtt'	=>	array('text/vtt', 'text/plain'),

@@ -9,6 +9,10 @@ application/logs/*
 !application/*/.htaccess
 
 composer.lock
+<<<<<<< HEAD
+=======
+tests/mocks/database/ci_test.sqlite
+>>>>>>> 4ac3e12faf0b0ddcad1091c595a68c1d1302375d
 
 user_guide_src/build/*
 user_guide_src/cilexer/build/*

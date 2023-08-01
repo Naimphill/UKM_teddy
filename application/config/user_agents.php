@@ -152,6 +152,14 @@ $mobiles = array(
 	'open web'		=> 'Open Web',
 	'openweb'		=> 'OpenWeb',
 	'meizu'                 => 'Meizu',
+<<<<<<< HEAD
+=======
+	'huawei'                => 'Huawei',
+	'xiaomi'                => 'Xiaomi',
+	'oppo'                  => 'Oppo',
+	'vivo'                  => 'Vivo',
+	'infinix'               => 'Infinix',
+>>>>>>> 4ac3e12faf0b0ddcad1091c595a68c1d1302375d
 
 	// Operating Systems
 	'android'		=> 'Android',
@@ -212,5 +220,10 @@ $robots = array(
 	'curious george'	=> 'Curious George',
 	'ia_archiver'		=> 'Alexa Crawler',
 	'MJ12bot'		=> 'Majestic-12',
+<<<<<<< HEAD
 	'Uptimebot'		=> 'Uptimebot'
+=======
+	'Uptimebot'		=> 'Uptimebot',
+	'UptimeRobot'		=> 'UptimeRobot'
+>>>>>>> 4ac3e12faf0b0ddcad1091c595a68c1d1302375d
 );

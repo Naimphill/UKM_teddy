@@ -39,7 +39,11 @@ issues, as well as missing features.
 Installation
 ************
 
+<<<<<<< HEAD
 Please see the `installation section <https://codeigniter.com/user_guide/installation/index.html>`_
+=======
+Please see the `installation section <https://codeigniter.com/userguide3/installation/index.html>`_
+>>>>>>> 4ac3e12faf0b0ddcad1091c595a68c1d1302375d
 of the CodeIgniter User Guide.
 
 *******
@@ -54,6 +58,10 @@ Resources
 *********
 
 -  `User Guide <https://codeigniter.com/docs>`_
+<<<<<<< HEAD
+=======
+-  `Contributing Guide <https://github.com/bcit-ci/CodeIgniter/blob/develop/contributing.md>`_
+>>>>>>> 4ac3e12faf0b0ddcad1091c595a68c1d1302375d
 -  `Language File Translations <https://github.com/bcit-ci/codeigniter3-translations>`_
 -  `Community Forums <http://forum.codeigniter.com/>`_
 -  `Community Wiki <https://github.com/bcit-ci/CodeIgniter/wiki>`_

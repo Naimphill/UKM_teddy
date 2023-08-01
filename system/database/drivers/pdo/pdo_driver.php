@@ -6,7 +6,11 @@
  *
  * This content is released under the MIT License (MIT)
  *
+<<<<<<< HEAD
  * Copyright (c) 2014 - 2019, British Columbia Institute of Technology
+=======
+ * Copyright (c) 2019 - 2022, CodeIgniter Foundation
+>>>>>>> 4ac3e12faf0b0ddcad1091c595a68c1d1302375d
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -30,6 +34,10 @@
  * @author	EllisLab Dev Team
  * @copyright	Copyright (c) 2008 - 2014, EllisLab, Inc. (https://ellislab.com/)
  * @copyright	Copyright (c) 2014 - 2019, British Columbia Institute of Technology (https://bcit.ca/)
+<<<<<<< HEAD
+=======
+ * @copyright	Copyright (c) 2019 - 2022, CodeIgniter Foundation (https://codeigniter.com/)
+>>>>>>> 4ac3e12faf0b0ddcad1091c595a68c1d1302375d
  * @license	https://opensource.org/licenses/MIT	MIT License
  * @link	https://codeigniter.com
  * @since	Version 2.1.0
@@ -48,7 +56,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * @subpackage	Drivers
  * @category	Database
  * @author		EllisLab Dev Team
+<<<<<<< HEAD
  * @link		https://codeigniter.com/user_guide/database/
+=======
+ * @link		https://codeigniter.com/userguide3/database/
+>>>>>>> 4ac3e12faf0b0ddcad1091c595a68c1d1302375d
  */
 class CI_DB_pdo_driver extends CI_DB {
 
@@ -131,6 +143,17 @@ class CI_DB_pdo_driver extends CI_DB {
 			$this->options[PDO::ATTR_PERSISTENT] = TRUE;
 		}
 
+<<<<<<< HEAD
+=======
+		// From PHP8.0, default PDO::ATTR_ERRMODE is changed
+		// from PDO::ERRMODE_SILENT to PDO::ERRMODE_EXCEPTION
+		// as https://wiki.php.net/rfc/pdo_default_errmode
+		if ( ! isset($this->options[PDO::ATTR_ERRMODE]))
+		{
+			$this->options[PDO::ATTR_ERRMODE] = PDO::ERRMODE_SILENT;
+		}
+
+>>>>>>> 4ac3e12faf0b0ddcad1091c595a68c1d1302375d
 		try
 		{
 			return new PDO($this->dsn, $this->username, $this->password, $this->options);
@@ -302,7 +325,11 @@ class CI_DB_pdo_driver extends CI_DB {
 		$error['code'] = isset($pdo_error[1]) ? $pdo_error[0].'/'.$pdo_error[1] : $pdo_error[0];
 		if (isset($pdo_error[2]))
 		{
+<<<<<<< HEAD
 			 $error['message'] = $pdo_error[2];
+=======
+			$error['message'] = $pdo_error[2];
+>>>>>>> 4ac3e12faf0b0ddcad1091c595a68c1d1302375d
 		}
 
 		return $error;
@@ -326,4 +353,20 @@ class CI_DB_pdo_driver extends CI_DB {
 		return 'TRUNCATE TABLE '.$table;
 	}
 
+<<<<<<< HEAD
+=======
+	// --------------------------------------------------------------------
+
+	/**
+	 * Close DB Connection
+	 *
+	 * @return	void
+	 */
+	protected function _close()
+	{
+		$this->result_id = FALSE;
+		$this->conn_id = FALSE;
+	}
+
+>>>>>>> 4ac3e12faf0b0ddcad1091c595a68c1d1302375d
 }

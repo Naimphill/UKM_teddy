@@ -6,7 +6,11 @@
  *
  * This content is released under the MIT License (MIT)
  *
+<<<<<<< HEAD
  * Copyright (c) 2014 - 2019, British Columbia Institute of Technology
+=======
+ * Copyright (c) 2019 - 2022, CodeIgniter Foundation
+>>>>>>> 4ac3e12faf0b0ddcad1091c595a68c1d1302375d
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -30,6 +34,10 @@
  * @author	EllisLab Dev Team
  * @copyright	Copyright (c) 2008 - 2014, EllisLab, Inc. (https://ellislab.com/)
  * @copyright	Copyright (c) 2014 - 2019, British Columbia Institute of Technology (https://bcit.ca/)
+<<<<<<< HEAD
+=======
+ * @copyright	Copyright (c) 2019 - 2022, CodeIgniter Foundation (https://codeigniter.com/)
+>>>>>>> 4ac3e12faf0b0ddcad1091c595a68c1d1302375d
  * @license	https://opensource.org/licenses/MIT	MIT License
  * @link	https://codeigniter.com
  * @since	Version 1.0.0
@@ -46,7 +54,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * @subpackage	Libraries
  * @category	Output
  * @author		EllisLab Dev Team
+<<<<<<< HEAD
  * @link		https://codeigniter.com/user_guide/libraries/output.html
+=======
+ * @link		https://codeigniter.com/userguide3/libraries/output.html
+>>>>>>> 4ac3e12faf0b0ddcad1091c595a68c1d1302375d
  */
 class CI_Output {
 
@@ -55,7 +67,11 @@ class CI_Output {
 	 *
 	 * @var	string
 	 */
+<<<<<<< HEAD
 	public $final_output;
+=======
+	public $final_output = '';
+>>>>>>> 4ac3e12faf0b0ddcad1091c595a68c1d1302375d
 
 	/**
 	 * Cache expiration time
@@ -145,7 +161,11 @@ class CI_Output {
 			&& extension_loaded('zlib')
 		);
 
+<<<<<<< HEAD
 		isset(self::$func_overload) OR self::$func_overload = (extension_loaded('mbstring') && ini_get('mbstring.func_overload'));
+=======
+		isset(self::$func_overload) OR self::$func_overload = ( ! is_php('8.0') && extension_loaded('mbstring') && @ini_get('mbstring.func_overload'));
+>>>>>>> 4ac3e12faf0b0ddcad1091c595a68c1d1302375d
 
 		// Get mime types for later
 		$this->mimes =& get_mimes();
@@ -299,10 +319,21 @@ class CI_Output {
 	 */
 	public function get_header($header)
 	{
+<<<<<<< HEAD
 		// Combine headers already sent with our batched headers
 		$headers = array_merge(
 			// We only need [x][0] from our multi-dimensional array
 			array_map('array_shift', $this->headers),
+=======
+		// We only need [x][0] from our multi-dimensional array
+		$header_lines = array_map(function ($headers)
+		{
+			return array_shift($headers);
+		}, $this->headers);
+
+		$headers = array_merge(
+			$header_lines,
+>>>>>>> 4ac3e12faf0b0ddcad1091c595a68c1d1302375d
 			headers_list()
 		);
 

@@ -6,7 +6,11 @@
  *
  * This content is released under the MIT License (MIT)
  *
+<<<<<<< HEAD
  * Copyright (c) 2014 - 2019, British Columbia Institute of Technology
+=======
+ * Copyright (c) 2019 - 2022, CodeIgniter Foundation
+>>>>>>> 4ac3e12faf0b0ddcad1091c595a68c1d1302375d
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -30,6 +34,10 @@
  * @author	EllisLab Dev Team
  * @copyright	Copyright (c) 2008 - 2014, EllisLab, Inc. (https://ellislab.com/)
  * @copyright	Copyright (c) 2014 - 2019, British Columbia Institute of Technology (https://bcit.ca/)
+<<<<<<< HEAD
+=======
+ * @copyright	Copyright (c) 2019 - 2022, CodeIgniter Foundation (https://codeigniter.com/)
+>>>>>>> 4ac3e12faf0b0ddcad1091c595a68c1d1302375d
  * @license	https://opensource.org/licenses/MIT	MIT License
  * @link	https://codeigniter.com
  * @since	Version 3.0.0
@@ -46,7 +54,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * @subpackage	Libraries
  * @category	Libraries
  * @author		Andrey Andreev
+<<<<<<< HEAD
  * @link		https://codeigniter.com/user_guide/libraries/encryption.html
+=======
+ * @link		https://codeigniter.com/userguide3/libraries/encryption.html
+>>>>>>> 4ac3e12faf0b0ddcad1091c595a68c1d1302375d
  */
 class CI_Encryption {
 
@@ -161,7 +173,11 @@ class CI_Encryption {
 			show_error('Encryption: Unable to find an available encryption driver.');
 		}
 
+<<<<<<< HEAD
 		isset(self::$func_overload) OR self::$func_overload = (extension_loaded('mbstring') && ini_get('mbstring.func_overload'));
+=======
+		isset(self::$func_overload) OR self::$func_overload = ( ! is_php('8.0') && extension_loaded('mbstring') && @ini_get('mbstring.func_overload'));
+>>>>>>> 4ac3e12faf0b0ddcad1091c595a68c1d1302375d
 		$this->initialize($params);
 
 		if ( ! isset($this->_key) && self::strlen($key = config_item('encryption_key')) > 0)
@@ -476,7 +492,11 @@ class CI_Encryption {
 
 		$iv = ($iv_size = openssl_cipher_iv_length($params['handle']))
 			? $this->create_key($iv_size)
+<<<<<<< HEAD
 			: NULL;
+=======
+			: '';
+>>>>>>> 4ac3e12faf0b0ddcad1091c595a68c1d1302375d
 
 		$data = openssl_encrypt(
 			$data,
@@ -585,7 +605,11 @@ class CI_Encryption {
 		}
 		else
 		{
+<<<<<<< HEAD
 			$iv = NULL;
+=======
+			$iv = '';
+>>>>>>> 4ac3e12faf0b0ddcad1091c595a68c1d1302375d
 		}
 
 		if (mcrypt_generic_init($params['handle'], $params['key'], $iv) < 0)
@@ -632,7 +656,11 @@ class CI_Encryption {
 		}
 		else
 		{
+<<<<<<< HEAD
 			$iv = NULL;
+=======
+			$iv = '';
+>>>>>>> 4ac3e12faf0b0ddcad1091c595a68c1d1302375d
 		}
 
 		return empty($params['handle'])
@@ -910,8 +938,13 @@ class CI_Encryption {
 	protected static function strlen($str)
 	{
 		return (self::$func_overload)
+<<<<<<< HEAD
 			? mb_strlen($str, '8bit')
 			: strlen($str);
+=======
+			? mb_strlen((string) $str, '8bit')
+			: strlen((string) $str);
+>>>>>>> 4ac3e12faf0b0ddcad1091c595a68c1d1302375d
 	}
 
 	// --------------------------------------------------------------------

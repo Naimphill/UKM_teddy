@@ -6,7 +6,11 @@
  *
  * This content is released under the MIT License (MIT)
  *
+<<<<<<< HEAD
  * Copyright (c) 2014 - 2019, British Columbia Institute of Technology
+=======
+ * Copyright (c) 2019 - 2022, CodeIgniter Foundation
+>>>>>>> 4ac3e12faf0b0ddcad1091c595a68c1d1302375d
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -30,6 +34,10 @@
  * @author	EllisLab Dev Team
  * @copyright	Copyright (c) 2008 - 2014, EllisLab, Inc. (https://ellislab.com/)
  * @copyright	Copyright (c) 2014 - 2019, British Columbia Institute of Technology (https://bcit.ca/)
+<<<<<<< HEAD
+=======
+ * @copyright	Copyright (c) 2019 - 2022, CodeIgniter Foundation (https://codeigniter.com/)
+>>>>>>> 4ac3e12faf0b0ddcad1091c595a68c1d1302375d
  * @license	https://opensource.org/licenses/MIT	MIT License
  * @link	https://codeigniter.com
  * @since	Version 1.0.0
@@ -50,7 +58,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * @subpackage	Libraries
  * @category	Libraries
  * @author		EllisLab Dev Team
+<<<<<<< HEAD
  * @link		https://codeigniter.com/user_guide/general/profiling.html
+=======
+ * @link		https://codeigniter.com/userguide3/general/profiling.html
+>>>>>>> 4ac3e12faf0b0ddcad1091c595a68c1d1302375d
  */
 class CI_Profiler {
 
@@ -105,7 +117,11 @@ class CI_Profiler {
 		{
 			if ( ! isset($config[$section]))
 			{
+<<<<<<< HEAD
 				$this->_compile_{$section} = TRUE;
+=======
+				$this->{'_compile_'.$section} = TRUE;
+>>>>>>> 4ac3e12faf0b0ddcad1091c595a68c1d1302375d
 			}
 		}
 
@@ -135,7 +151,11 @@ class CI_Profiler {
 		{
 			if (in_array($method, $this->_available_sections))
 			{
+<<<<<<< HEAD
 				$this->_compile_{$method} = ($enable !== FALSE);
+=======
+				$this->{'_compile_'.$method} = ($enable !== FALSE);
+>>>>>>> 4ac3e12faf0b0ddcad1091c595a68c1d1302375d
 			}
 		}
 	}
@@ -486,6 +506,7 @@ class CI_Profiler {
 		{
 			$pre       = '';
 			$pre_close = '';
+<<<<<<< HEAD
                         
 			if (is_array($val) OR is_object($val))
 			{
@@ -497,6 +518,19 @@ class CI_Profiler {
 
 			$output .= '<tr><td style="padding:5px;vertical-align:top;color:#900;background-color:#ddd;">'
 				.$config.'&nbsp;&nbsp;</td><td style="padding:5px;color:#000;background-color:#ddd;">'.$pre.htmlspecialchars($val, ENT_QUOTES, config_item('charset')).$pre_close."</td></tr>\n";
+=======
+
+			if (is_array($val) OR is_object($val))
+			{
+				$val = print_r($val, TRUE);
+
+				$pre       = '<pre>' ;
+				$pre_close = '</pre>';
+			}
+
+			$output .= '<tr><td style="padding:5px;vertical-align:top;color:#900;background-color:#ddd;">'
+				.$config.'&nbsp;&nbsp;</td><td style="padding:5px;color:#000;background-color:#ddd;">'.$pre.htmlspecialchars((string) $val, ENT_QUOTES, config_item('charset')).$pre_close."</td></tr>\n";
+>>>>>>> 4ac3e12faf0b0ddcad1091c595a68c1d1302375d
 		}
 
 		return $output."</table>\n</fieldset>";
@@ -524,6 +558,7 @@ class CI_Profiler {
 		{
 			$pre       = '';
 			$pre_close = '';
+<<<<<<< HEAD
                         
 			if (is_array($val) OR is_object($val))
 			{
@@ -535,6 +570,19 @@ class CI_Profiler {
 
 			$output .= '<tr><td style="padding:5px;vertical-align:top;color:#900;background-color:#ddd;">'
 				.$key.'&nbsp;&nbsp;</td><td style="padding:5px;color:#000;background-color:#ddd;">'.$pre.htmlspecialchars($val, ENT_QUOTES, config_item('charset')).$pre_close."</td></tr>\n";
+=======
+
+			if (is_array($val) OR is_object($val))
+			{
+				$val = print_r($val, TRUE);
+
+				$pre       = '<pre>' ;
+				$pre_close = '</pre>';
+			}
+
+			$output .= '<tr><td style="padding:5px;vertical-align:top;color:#900;background-color:#ddd;">'
+				.$key.'&nbsp;&nbsp;</td><td style="padding:5px;color:#000;background-color:#ddd;">'.$pre.htmlspecialchars((string) $val, ENT_QUOTES, config_item('charset')).$pre_close."</td></tr>\n";
+>>>>>>> 4ac3e12faf0b0ddcad1091c595a68c1d1302375d
 		}
 
 		return $output."</table>\n</fieldset>";
@@ -554,7 +602,11 @@ class CI_Profiler {
 
 		foreach ($this->_available_sections as $section)
 		{
+<<<<<<< HEAD
 			if ($this->_compile_{$section} !== FALSE)
+=======
+			if ($this->{'_compile_'.$section} !== FALSE)
+>>>>>>> 4ac3e12faf0b0ddcad1091c595a68c1d1302375d
 			{
 				$func = '_compile_'.$section;
 				$output .= $this->{$func}();
