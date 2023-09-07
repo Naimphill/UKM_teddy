@@ -1,4 +1,5 @@
 <?php
+
 /**
  * 
  */
@@ -36,35 +37,32 @@ class Login_ukm extends CI_Controller
             }
 
             redirect('Ukm');
-
         } else {
             $this->session->set_flashdata('flash', 'Username dan atau Password salah');
             redirect('login_ukm');
         }
-
     }
 
-    public function save_register()
-    {
-        //post data
-        $username = $_POST['username'];
-        $password = md5($_POST['password']);
-        //save data
-        $dataInsert = array(
-            'username' => $username,
-            'password' => $password,
-            'level' => 'user'
-        );
-        $this->Mcrud->insert('tbl_user', $dataInsert);
-        $this->session->set_flashdata('flash', 'Berhasil');
+    // public function save_register()
+    // {
+    //     //post data
+    //     $username = $_POST['username'];
+    //     $password = md5($_POST['password']);
+    //     //save data
+    //     $dataInsert = array(
+    //         'username' => $username,
+    //         'password' => $password,
+    //         'level' => 'user'
+    //     );
+    //     $this->Mcrud->insert('tbl_user', $dataInsert);
+    //     $this->session->set_flashdata('flash', 'Berhasil');
 
-        redirect('login');
+    //     redirect('login');
 
-    }
+    // }
     public function logout()
     {
         $this->session->sess_destroy();
         redirect('login_ukm');
     }
 }
-?>

@@ -85,7 +85,7 @@ class Ukm extends CI_Controller
 
         //setting file foto
         $data_file = $_FILES['file'];
-        $config['file_name'] = time() . $data_file['name'];
+        $config['file_name'] = md5(time() . $data_file['name']);
         $config['upload_path'] = './upload_file/';
         $config['allowed_types'] = 'pdf|PDF';
         $config['max_size'] = 10240;
@@ -111,7 +111,6 @@ class Ukm extends CI_Controller
         $this->Mcrud->insert('tbl_rencana_kegiatan', $datainsert);
         $this->session->set_flashdata('flash', 'Disimpan');
         redirect('Ukm/rencana_kegiatan');
-
     }
     public function hapus_rencana($id)
     {
@@ -120,5 +119,4 @@ class Ukm extends CI_Controller
         $this->session->set_flashdata('flash', 'Dihapus');
         redirect('Ukm/rencana_kegiatan');
     }
-
 }

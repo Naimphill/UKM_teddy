@@ -49,12 +49,10 @@
                 <ul class="navbar-nav navbar-nav-right">
                     <li class="nav-item nav-profile dropdown">
                         <a class="nav-link dropdown-toggle" id="profileDropdown" href="#" data-toggle="dropdown"
-                            aria-expanded="false"><?php echo $this->session->userdata('username'); ?>
+                            aria-expanded="false">
+                            <?php echo $this->session->userdata('username'); ?>
                         </a>
                         <div class="dropdown-menu navbar-dropdown" aria-labelledby="profileDropdown">
-                            <a class="dropdown-item" href="#">
-                                <i class="mdi mdi-cached mr-2 text-success"></i> Activity Log </a>
-                            <div class="dropdown-divider"></div>
                             <a class="dropdown-item tombolkeluar" href="<?php echo site_url('login/logout') ?>">
                                 <i class="mdi mdi-logout mr-2 text-primary"></i> Signout </a>
                         </div>
@@ -100,7 +98,7 @@
                     </li>
                     <li class="nav-item">
                         <a href="<?php echo site_url('Adminpanel/rencana_kegiatan') ?>" class="nav-link">
-                            <span class="menu-title">Laporan Rencana Kegiatan</span>
+                            <span class="menu-title">Laporan Rencana <br> Kegiatan</span>
                             <i class="mdi mdi-format-list-bulleted menu-icon"></i>
                         </a>
                     </li>
@@ -125,9 +123,10 @@
     </div>
     <footer class="footer">
         <div class="d-sm-flex justify-content-center justify-content-sm-between">
-            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2017 <a
-                    href="https://www.bootstrapdash.com/" target="_blank">BootstrapDash</a>. All rights reserved.</span>
-            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with <i
+            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block"><a
+                    href="https://www.instagram.com/m.teddytria/" target="_blank">Muhammad Teddy Tria
+                    Nugroho</a>.</span>
+            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">19.12.1212 <i
                     class="mdi mdi-heart text-danger"></i></span>
         </div>
     </footer>
@@ -159,6 +158,12 @@
         $(document).ready(function () {
             $('#datatabel3').DataTable();
         });
+        $(document).ready(function () {
+            $('#datatabel4').DataTable();
+        });
+        $(document).ready(function () {
+            $('#datatabel5').DataTable();
+        });
     </script>
     <!-- End DataTables -->
     <!-- Sweet Alert Script -->
@@ -171,6 +176,22 @@
                 title: 'Data',
                 text: 'Berhasil ' + flashData,
                 icon: 'success'
+            });
+        }
+        const flashTolak = $('.flash-tolak').data('flashdata');
+        if (flashTolak) {
+            Swal.fire({
+                title: 'Data Gagal Disimpan',
+                text: '' + flashTolak,
+                icon: 'error'
+            });
+        }
+        const error = $('.flash-error').data('flashdata');
+        if (error) {
+            Swal.fire({
+                title: 'Gagal Dihapus',
+                text: '' + error,
+                icon: 'error'
             });
         }
         // Tombol Keluar

@@ -4,7 +4,7 @@
         <div class="page-header">
             <h3 class="page-title">
                 <span class="page-title-icon bg-gradient-primary text-white mr-2">
-                    <i class="mdi mdi-home"></i>
+                    <i class="mdi mdi-book-multiple-variant menu-icon"></i>
                 </span>
                 <?php echo $ukm->nm_ukm; ?>
             </h3>
@@ -16,8 +16,7 @@
                         <div class="col-md-4 stretch-card grid-margin">
                             <div class="card bg-gradient-info card-img-holder text-white">
                                 <div class="card-body">
-                                    <img src="<?php echo base_url('assets/images/dashboard/circle.svg') ?>"
-                                        class="card-img-absolute" alt="circle-image" />
+                                    <img src="<?php echo base_url('assets/images/dashboard/circle.svg') ?>" class="card-img-absolute" alt="circle-image" />
                                     <h4 class="font-weight-normal mb-3"> <i class="mdi mdi-chart-line mdi-24px float-right"></i>
                                         <?php foreach ($data_ukm as $dkm) {
                                             if ($dkm->id_ukm == $val->id_ukm) {
@@ -37,9 +36,8 @@
                                 </div>
                             </div>
                         </div>
-                    <?php }
+            <?php }
                 }
-
             } ?>
 
 

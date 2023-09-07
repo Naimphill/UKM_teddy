@@ -74,23 +74,16 @@ $active_group = 'default';
 $query_builder = TRUE;
 
 $db['default'] = array(
-<<<<<<< HEAD
 	'dsn' => '',
 	'hostname' => 'localhost',
 	'username' => 'root',
 	'password' => '',
 	'database' => 'db_teddy',
-=======
-	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => 'root',
-	'password' => '',
-	'database' => 'saffairs',
->>>>>>> 4ac3e12faf0b0ddcad1091c595a68c1d1302375d
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
-	'db_debug' => (ENVIRONMENT !== 'production'),
+	// 'db_debug' => (ENVIRONMENT !== 'production'),
+	'db_debug' => FALSE,
 	'cache_on' => FALSE,
 	'cachedir' => '',
 	'char_set' => 'utf8',
@@ -101,8 +94,4 @@ $db['default'] = array(
 	'stricton' => FALSE,
 	'failover' => array(),
 	'save_queries' => TRUE
-<<<<<<< HEAD
 );
-=======
-);
->>>>>>> 4ac3e12faf0b0ddcad1091c595a68c1d1302375d

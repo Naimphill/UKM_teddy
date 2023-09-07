@@ -34,10 +34,8 @@
         <!-- partial:partials/_navbar.html -->
         <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
             <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-                <a class="navbar-brand brand-logo" href="<?php echo site_url('Ukm') ?>"><img
-                        src="<?php echo base_url('assets/images/logo-ukm.svg'); ?>" alt="logo" /></a>
-                <a class="navbar-brand brand-logo-mini" href="<?php echo site_url('Ukm') ?>"><img
-                        src="<?php echo base_url('assets/images/logo-ukm-mini.svg'); ?>" alt="logo" /></a>
+                <a class="navbar-brand brand-logo" href="<?php echo site_url('Ukm') ?>"><img src="<?php echo base_url('assets/images/logo-ukm.svg'); ?>" alt="logo" /></a>
+                <a class="navbar-brand brand-logo-mini" href="<?php echo site_url('Ukm') ?>"><img src="<?php echo base_url('assets/images/logo-ukm-mini.svg'); ?>" alt="logo" /></a>
             </div>
             <div class="navbar-menu-wrapper d-flex align-items-stretch">
                 <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
@@ -48,12 +46,9 @@
                 </div>
                 <ul class="navbar-nav navbar-nav-right">
                     <li class="nav-item nav-profile dropdown">
-                        <a class="nav-link dropdown-toggle" id="profileDropdown" href="#" data-toggle="dropdown"
-                            aria-expanded="false"><?php echo $this->session->userdata('username'); ?>
+                        <a class="nav-link dropdown-toggle" id="profileDropdown" href="#" data-toggle="dropdown" aria-expanded="false"><?php echo $this->session->userdata('username'); ?>
                         </a>
                         <div class="dropdown-menu navbar-dropdown" aria-labelledby="profileDropdown">
-                            <a class="dropdown-item" href="#">
-                                <i class="mdi mdi-cached mr-2 text-success"></i> Activity Log </a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item tombolkeluar" href="<?php echo site_url('login_ukm/logout') ?>">
                                 <i class="mdi mdi-logout mr-2 text-primary"></i> Signout </a>
@@ -89,7 +84,8 @@
                         </a>
                     </li>
                     <!-- <li class="nav-item">
-                        <a href="<?php // echo site_url('Ukm/data_admin') ?>" class="nav-link">
+                        <a href="<?php // echo site_url('Ukm/data_admin') 
+                                    ?>" class="nav-link">
                             <span class="menu-title">Data Admin</span>
                             <i class="mdi mdi-contacts menu-icon"></i>
                         </a>
@@ -102,12 +98,13 @@
                     </li>
                     <li class="nav-item">
                         <a href="<?php echo site_url('Ukm/rencana_kegiatan') ?>" class="nav-link">
-                            <span class="menu-title">Laporan Rencana Kegiatan</span>
+                            <span class="menu-title">Laporan Rencana <br> Kegiatan</span>
                             <i class="mdi mdi-format-list-bulleted menu-icon"></i>
                         </a>
                     </li>
                     <!-- <li class="nav-item">
-                        <a href="<?php //echo site_url('Ukm/kegiatan') ?>" class="nav-link">
+                        <a href="<?php //echo site_url('Ukm/kegiatan') 
+                                    ?>" class="nav-link">
                             <span class="menu-title">Kegiatan UKM</span>
                             <i class="mdi mdi-collage menu-icon"></i>
                         </a>
@@ -127,10 +124,8 @@
     </div>
     <footer class="footer">
         <div class="d-sm-flex justify-content-center justify-content-sm-between">
-            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2017 <a
-                    href="https://www.bootstrapdash.com/" target="_blank">BootstrapDash</a>. All rights reserved.</span>
-            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with <i
-                    class="mdi mdi-heart text-danger"></i></span>
+            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block"><a href="https://www.instagram.com/m.teddytria/" target="_blank">Muhammad Teddy Tria Nugroho</a>.</span>
+            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">19.12.1212 <i class="mdi mdi-heart text-danger"></i></span>
         </div>
     </footer>
     <!-- partial -->
@@ -152,13 +147,13 @@
     <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap4.min.js"></script>
     <script>
-        $(document).ready(function () {
+        $(document).ready(function() {
             $('#datatabel').DataTable();
         });
-        $(document).ready(function () {
+        $(document).ready(function() {
             $('#datatabel2').DataTable();
         });
-        $(document).ready(function () {
+        $(document).ready(function() {
             $('#datatabel3').DataTable();
         });
     </script>
@@ -176,7 +171,7 @@
             });
         }
         // Tombol Keluar
-        $('.tombolkeluar').on('click', function (e) {
+        $('.tombolkeluar').on('click', function(e) {
             e.preventDefault();
             const href = $(this).attr('href');
 
@@ -195,7 +190,7 @@
             })
         });
         // Tombol Hapus
-        $('.tombolhapus').on('click', function (e) {
+        $('.tombolhapus').on('click', function(e) {
             e.preventDefault();
             const href = $(this).attr('href');
 
@@ -213,7 +208,7 @@
                 }
             })
         });
-        $('.tombolkirim').on('click', function (e) {
+        $('.tombolkirim').on('click', function(e) {
             e.preventDefault();
             const form = $(this).closest('form');
 

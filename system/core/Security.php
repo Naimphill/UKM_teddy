@@ -6,11 +6,7 @@
  *
  * This content is released under the MIT License (MIT)
  *
-<<<<<<< HEAD
  * Copyright (c) 2014 - 2019, British Columbia Institute of Technology
-=======
- * Copyright (c) 2019 - 2022, CodeIgniter Foundation
->>>>>>> 4ac3e12faf0b0ddcad1091c595a68c1d1302375d
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -34,10 +30,6 @@
  * @author	EllisLab Dev Team
  * @copyright	Copyright (c) 2008 - 2014, EllisLab, Inc. (https://ellislab.com/)
  * @copyright	Copyright (c) 2014 - 2019, British Columbia Institute of Technology (https://bcit.ca/)
-<<<<<<< HEAD
-=======
- * @copyright	Copyright (c) 2019 - 2022, CodeIgniter Foundation (https://codeigniter.com/)
->>>>>>> 4ac3e12faf0b0ddcad1091c595a68c1d1302375d
  * @license	https://opensource.org/licenses/MIT	MIT License
  * @link	https://codeigniter.com
  * @since	Version 1.0.0
@@ -52,11 +44,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * @subpackage	Libraries
  * @category	Security
  * @author		EllisLab Dev Team
-<<<<<<< HEAD
  * @link		https://codeigniter.com/user_guide/libraries/security.html
-=======
- * @link		https://codeigniter.com/userguide3/libraries/security.html
->>>>>>> 4ac3e12faf0b0ddcad1091c595a68c1d1302375d
  */
 class CI_Security {
 
@@ -205,11 +193,7 @@ class CI_Security {
 			$this->_csrf_set_hash();
 		}
 
-<<<<<<< HEAD
 		$this->charset = strtoupper(config_item('charset'));
-=======
-		$this->charset = strtoupper((string) config_item('charset'));
->>>>>>> 4ac3e12faf0b0ddcad1091c595a68c1d1302375d
 
 		log_message('info', 'Security Class Initialized');
 	}
@@ -288,7 +272,6 @@ class CI_Security {
 			return FALSE;
 		}
 
-<<<<<<< HEAD
 		setcookie(
 			$this->_csrf_cookie_name,
 			$this->_csrf_hash,
@@ -298,37 +281,6 @@ class CI_Security {
 			$secure_cookie,
 			config_item('cookie_httponly')
 		);
-=======
-		if (is_php('7.3'))
-		{
-			setcookie(
-				$this->_csrf_cookie_name,
-				$this->_csrf_hash,
-				array(
-					'expires'  => $expire,
-					'path'     => config_item('cookie_path'),
-					'domain'   => config_item('cookie_domain'),
-					'secure'   => $secure_cookie,
-					'httponly' => config_item('cookie_httponly'),
-					'samesite' => 'Strict'
-				)
-			);
-		}
-		else
-		{
-			$domain = trim(config_item('cookie_domain'));
-			header('Set-Cookie: '.$this->_csrf_cookie_name.'='.$this->_csrf_hash
-					.'; Expires='.gmdate('D, d-M-Y H:i:s T', $expire)
-					.'; Max-Age='.$this->_csrf_expire
-					.'; Path='.rawurlencode(config_item('cookie_path'))
-					.($domain === '' ? '' : '; Domain='.$domain)
-					.($secure_cookie ? '; Secure' : '')
-					.(config_item('cookie_httponly') ? '; HttpOnly' : '')
-					.'; SameSite=Strict'
-			);
-		}
-
->>>>>>> 4ac3e12faf0b0ddcad1091c595a68c1d1302375d
 		log_message('info', 'CSRF cookie sent');
 
 		return $this;
@@ -683,10 +635,7 @@ class CI_Security {
 			return $output;
 		}
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 4ac3e12faf0b0ddcad1091c595a68c1d1302375d
 		if (is_readable('/dev/urandom') && ($fp = fopen('/dev/urandom', 'rb')) !== FALSE)
 		{
 			// Try not to waste entropy ...

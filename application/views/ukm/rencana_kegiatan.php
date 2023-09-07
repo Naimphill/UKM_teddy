@@ -8,23 +8,25 @@
         <div class="page-header">
             <h3 class="page-title">
                 <span class="page-title-icon bg-gradient-primary text-white mr-2">
-                    <i class="mdi mdi-book-multiple-variant"></i>
+                    <i class="mdi mdi-format-list-bulleted menu-icon"></i>
                 </span> Data Rencana Kegiatan UKM
             </h3>
         </div>
         <div class="row">
             <div class="col-md-12">
                 <div class="row">
-                    <div class="col-md-9">
+                    <!-- <div class="col-md-9">
                         <h4>Data Rencana Kegiatan UKM</h4><br>
-                    </div>
+                    </div> -->
                 </div>
-                <a href="" class="btn btn-block btn-primary" data-toggle="modal" data-target=".tambah">Tambah Rencana
+                <a href="" class="btn btn-gradient-success btn-rounded btn-fw" data-toggle="modal"
+                    data-target=".tambah">Tambah Rencana
                     Kegiatan</a>
+                <br>
                 <br>
                 <div class="card">
                     <div class="card-header">
-                        <h4>Laporan Rencana "Menunggu"</h4>
+                        <h4>Laporan Rencana "MENUNGGU"</h4>
                     </div>
                     <div class="card-body">
                         <table id="datatabel" class="table table-bordered table-striped">
@@ -59,7 +61,10 @@
                                                 </td>
                                                 <td>
                                                     <a href="<?php echo site_url('/upload_file/' . $key->file) ?>" target="_blank">
-                                                        <i class="mdi mdi-file"></i>
+                                                        <button type="button" class="btn btn-gradient-dark btn-icon-text btn-sm">
+                                                            File
+                                                            <i class="mdi mdi-file-check btn-icon-append"></i>
+                                                        </button>
                                                     </a>
                                                 </td>
                                                 <td>
@@ -73,11 +78,7 @@
                                                         href="<?php echo site_url('Ukm/hapus_rencana/' . $idk) ?>">Hapus</a>
                                                 </td>
                                             </tr>
-                                            <?php
-                                        } else { ?>
-                                            <tr>
-                                                <td colspan="7">Data Kosong</td>
-                                            </tr>
+
                                         <?php }
                                     }
                                 } ?>
@@ -87,7 +88,7 @@
                 </div><br>
                 <div class="card">
                     <div class="card-header">
-                        <h4>Laporan Rencana "Diterima"</h4>
+                        <h4>Laporan Rencana "DITERIMA"</h4>
                     </div>
                     <div class="card-body">
                         <table id="datatabel2" class="table table-bordered table-striped">
@@ -119,7 +120,10 @@
                                                 </td>
                                                 <td>
                                                     <a href="<?php echo site_url('/upload_file/' . $key->file) ?>" target="_blank">
-                                                        <i class="mdi mdi-file"></i>
+                                                        <button type="button" class="btn btn-gradient-dark btn-icon-text btn-sm">
+                                                            File
+                                                            <i class="mdi mdi-file-check btn-icon-append"></i>
+                                                        </button>
                                                     </a>
                                                 </td>
                                                 <td>
@@ -128,11 +132,6 @@
                                                 <td>
                                                     <?php echo $key->status; ?>
                                                 </td>
-                                            </tr>
-
-                                        <?php } else { ?>
-                                            <tr>
-                                                <td colspan="7">Data Kosong</td>
                                             </tr>
                                         <?php }
                                     }
@@ -143,7 +142,7 @@
                 </div><br>
                 <div class="card">
                     <div class="card-header">
-                        <h4>Laporan Rencana "Ditolak"</h4>
+                        <h4>Laporan Rencana "DITOLAK"</h4>
                     </div>
                     <div class="card-body">
                         <table id="datatabel3" class="table table-bordered table-striped">
@@ -153,8 +152,8 @@
                                     <th scope="col">Nama UKM</th>
                                     <th scope="col">Judul</th>
                                     <th scope="col">File</th>
-                                    <th scope="col">Waktu Acara</th>
                                     <th scope="col">Status</th>
+                                    <th scope="col">Keterangan</th>
                                     <th scope="col">Action</th>
                                 </tr>
                             </thead>
@@ -176,24 +175,22 @@
                                                 </td>
                                                 <td>
                                                     <a href="<?php echo site_url('/upload_file/' . $key->file) ?>" target="_blank">
-                                                        <i class="mdi mdi-file"></i>
+                                                        <button type="button" class="btn btn-gradient-dark btn-icon-text btn-sm">
+                                                            File
+                                                            <i class="mdi mdi-file-check btn-icon-append"></i>
+                                                        </button>
                                                     </a>
-                                                </td>
-                                                <td>
-                                                    <?php echo $key->waktu; ?>
                                                 </td>
                                                 <td>
                                                     <?php echo $key->status; ?>
                                                 </td>
                                                 <td>
+                                                    <?php echo $key->ket_tolak; ?>
+                                                </td>
+                                                <td>
                                                     <a class="btn btn-outline-danger tombolhapus"
                                                         href="<?php echo site_url('Ukm/hapus_rencana/' . $idk) ?>">Hapus</a>
                                                 </td>
-                                            </tr>
-
-                                        <?php } else { ?>
-                                            <tr>
-                                                <td colspan="7">Data Kosong</td>
                                             </tr>
                                         <?php }
                                     }
@@ -224,25 +221,26 @@
                         enctype="multipart/form-data">
                         <div class="form-group">
                             <label for="exampleFormControlInput1">Nama UKM</label>
-                            <input type="text" class="form-control" name="" value="<?php echo $ukm->nm_ukm; ?>"
+                            <input type="text" class="form-control" required name="" value="<?php echo $ukm->nm_ukm; ?>"
                                 readonly>
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlInput1">Judul</label>
-                            <input type="text" class="form-control" name="judul">
+                            <input type="text" class="form-control" required name="judul">
                         </div>
                         <div class=" form-group">
                             <label for="exampleFormControlInput1">Waktu</label>
-                            <input type="datetime-local" id="datetimeInput" class="form-control" name="waktu">
+                            <input type="datetime-local" id="datetimeInput" class="form-control" required name="waktu">
                         </div>
                         <div class=" form-group">
                             <label for="exampleFormControlInput1">Tempat</label>
-                            <input type="text" class="form-control" name="tempat">
+                            <input type="text" class="form-control" required name="tempat">
                         </div>
-                        <input type="hidden" class="form-control" name="id_ukm" value="<?php echo $ukm->id_ukm; ?>">
+                        <input type="hidden" class="form-control" required name="id_ukm"
+                            value="<?php echo $ukm->id_ukm; ?>">
                         <div class=" form-group">
                             <label for="exampleFormControlInput1">Deskripsi</label>
-                            <input type="text" class="form-control" name="deskripsi">
+                            <input type="text" class="form-control" required name="deskripsi">
                         </div>
                         <div class=" form-group">
                             <label for="exampleFormControlInput1">Upload File Laporan</label>
@@ -250,12 +248,13 @@
                         <div class=" input-group mb-3">
                             <div class="custom-file">
                                 <input type="file" class="custom-file-input" name="file" id="file-upload"
-                                    aria-describedby="inputGroupFileAddon01">
+                                    aria-describedby="inputGroupFileAddon01" required>
                                 <label class="custom-file-label" id="file-name" for="inputGroupFile01">Choose
                                     file</label>
                             </div>
                         </div>
-                        <button type=" submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-gradient-primary btn-icon-text">
+                            <i class=""></i> Submit </button>
                     </form>
                 </div>
             </div>

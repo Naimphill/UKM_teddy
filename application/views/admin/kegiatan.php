@@ -15,9 +15,9 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="row">
-                    <div class="col-md-9">
+                    <!-- <div class="col-md-9">
                         <h4>Data Kegiatan UKM</h4><br>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="card">
                     <div class="card-body">
@@ -53,15 +53,25 @@
                                             </td>
                                             <td>
                                                 <a href="<?php echo site_url('/upload_file/' . $key->file) ?>" target="_blank">
-                                                    <i class="mdi mdi-file"></i>
+                                                    <button type="button" class="btn btn-gradient-dark btn-icon-text btn-sm">
+                                                        File
+                                                        <i class="mdi mdi-file-check btn-icon-append"></i>
+                                                    </button>
                                                 </a>
                                             </td>
                                             <td>
                                                 <?php echo $key->tgl_kirim; ?>
                                             </td>
                                             <td>
-                                                <?php echo $key->status; ?>
+                                                <?php echo $key->status;
+                                                foreach ($persetujuan as $per) {
+                                                    if ($idk == $per->id_rencana) {
+                                                        echo ' <b> (' . $per->status . ')</b>';
+                                                    }
+                                                }
+                                                ?>
                                             </td>
+
                                         </tr>
                                         <!-- Modal Edit UKM-->
                                         <div class="modal fade id_<?php echo $idk ?>" id="id_<?php echo $idk ?>" tabindex="-1"

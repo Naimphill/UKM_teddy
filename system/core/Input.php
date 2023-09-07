@@ -6,11 +6,7 @@
  *
  * This content is released under the MIT License (MIT)
  *
-<<<<<<< HEAD
  * Copyright (c) 2014 - 2019, British Columbia Institute of Technology
-=======
- * Copyright (c) 2019 - 2022, CodeIgniter Foundation
->>>>>>> 4ac3e12faf0b0ddcad1091c595a68c1d1302375d
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -34,10 +30,6 @@
  * @author	EllisLab Dev Team
  * @copyright	Copyright (c) 2008 - 2014, EllisLab, Inc. (https://ellislab.com/)
  * @copyright	Copyright (c) 2014 - 2019, British Columbia Institute of Technology (https://bcit.ca/)
-<<<<<<< HEAD
-=======
- * @copyright	Copyright (c) 2019 - 2022, CodeIgniter Foundation (https://codeigniter.com/)
->>>>>>> 4ac3e12faf0b0ddcad1091c595a68c1d1302375d
  * @license	https://opensource.org/licenses/MIT	MIT License
  * @link	https://codeigniter.com
  * @since	Version 1.0.0
@@ -54,11 +46,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * @subpackage	Libraries
  * @category	Input
  * @author		EllisLab Dev Team
-<<<<<<< HEAD
  * @link		https://codeigniter.com/user_guide/libraries/input.html
-=======
- * @link		https://codeigniter.com/userguide3/libraries/input.html
->>>>>>> 4ac3e12faf0b0ddcad1091c595a68c1d1302375d
  */
 class CI_Input {
 
@@ -369,25 +357,14 @@ class CI_Input {
 	 * @param	string		$prefix		Cookie name prefix
 	 * @param	bool		$secure		Whether to only transfer cookies via SSL
 	 * @param	bool		$httponly	Whether to only makes the cookie accessible via HTTP (no javascript)
-<<<<<<< HEAD
 	 * @return	void
 	 */
 	public function set_cookie($name, $value = '', $expire = '', $domain = '', $path = '/', $prefix = '', $secure = NULL, $httponly = NULL)
-=======
-	 * @param	string		$samesite	SameSite attribute
-	 * @return	void
-	 */
-	public function set_cookie($name, $value = '', $expire = '', $domain = '', $path = '/', $prefix = '', $secure = NULL, $httponly = NULL, $samesite = NULL)
->>>>>>> 4ac3e12faf0b0ddcad1091c595a68c1d1302375d
 	{
 		if (is_array($name))
 		{
 			// always leave 'name' in last place, as the loop will break otherwise, due to $$item
-<<<<<<< HEAD
 			foreach (array('value', 'expire', 'domain', 'path', 'prefix', 'secure', 'httponly', 'name') as $item)
-=======
-			foreach (array('value', 'expire', 'domain', 'path', 'prefix', 'secure', 'httponly', 'name', 'samesite') as $item)
->>>>>>> 4ac3e12faf0b0ddcad1091c595a68c1d1302375d
 			{
 				if (isset($name[$item]))
 				{
@@ -428,51 +405,7 @@ class CI_Input {
 			$expire = ($expire > 0) ? time() + $expire : 0;
 		}
 
-<<<<<<< HEAD
 		setcookie($prefix.$name, $value, $expire, $path, $domain, $secure, $httponly);
-=======
-		isset($samesite) OR $samesite = config_item('cookie_samesite');
-		if (isset($samesite))
-		{
-			$samesite = ucfirst(strtolower($samesite));
-			in_array($samesite, array('Lax', 'Strict', 'None'), TRUE) OR $samesite = 'Lax';
-		}
-		else
-		{
-			$samesite = 'Lax';
-		}
-
-		if ($samesite === 'None' && ! $secure)
-		{
-			log_message('error', $name.' cookie sent with SameSite=None, but without Secure attribute.');
-		}
-
-		if ( ! is_php('7.3'))
-		{
-			$maxage = $expire - time();
-			if ($maxage < 1)
-			{
-				$maxage = 0;
-			}
-
-			$cookie_header = 'Set-Cookie: '.$prefix.$name.'='.rawurlencode($value);
-			$cookie_header .= ($expire === 0 ? '' : '; Expires='.gmdate('D, d-M-Y H:i:s T', $expire)).'; Max-Age='.$maxage;
-			$cookie_header .= '; Path='.$path.($domain !== '' ? '; Domain='.$domain : '');
-			$cookie_header .= ($secure ? '; Secure' : '').($httponly ? '; HttpOnly' : '').'; SameSite='.$samesite;
-			header($cookie_header);
-			return;
-		}
-
-		$setcookie_options = array(
-			'expires' => $expire,
-			'path' => $path,
-			'domain' => $domain,
-			'secure' => $secure,
-			'httponly' => $httponly,
-			'samesite' => $samesite,
-		);
-		setcookie($prefix.$name, $value, $setcookie_options);
->>>>>>> 4ac3e12faf0b0ddcad1091c595a68c1d1302375d
 	}
 
 	// --------------------------------------------------------------------
@@ -632,11 +565,7 @@ class CI_Input {
 				$which = FILTER_FLAG_IPV6;
 				break;
 			default:
-<<<<<<< HEAD
 				$which = NULL;
-=======
-				$which = 0;
->>>>>>> 4ac3e12faf0b0ddcad1091c595a68c1d1302375d
 				break;
 		}
 

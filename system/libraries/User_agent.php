@@ -6,11 +6,7 @@
  *
  * This content is released under the MIT License (MIT)
  *
-<<<<<<< HEAD
  * Copyright (c) 2014 - 2019, British Columbia Institute of Technology
-=======
- * Copyright (c) 2019 - 2022, CodeIgniter Foundation
->>>>>>> 4ac3e12faf0b0ddcad1091c595a68c1d1302375d
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -34,10 +30,6 @@
  * @author	EllisLab Dev Team
  * @copyright	Copyright (c) 2008 - 2014, EllisLab, Inc. (https://ellislab.com/)
  * @copyright	Copyright (c) 2014 - 2019, British Columbia Institute of Technology (https://bcit.ca/)
-<<<<<<< HEAD
-=======
- * @copyright	Copyright (c) 2019 - 2022, CodeIgniter Foundation (https://codeigniter.com/)
->>>>>>> 4ac3e12faf0b0ddcad1091c595a68c1d1302375d
  * @license	https://opensource.org/licenses/MIT	MIT License
  * @link	https://codeigniter.com
  * @since	Version 1.0.0
@@ -54,11 +46,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * @subpackage	Libraries
  * @category	User Agent
  * @author		EllisLab Dev Team
-<<<<<<< HEAD
  * @link		https://codeigniter.com/user_guide/libraries/user_agent.html
-=======
- * @link		https://codeigniter.com/userguide3/libraries/user_agent.html
->>>>>>> 4ac3e12faf0b0ddcad1091c595a68c1d1302375d
  */
 class CI_User_agent {
 
@@ -510,11 +498,7 @@ class CI_User_agent {
 			else
 			{
 				$referer_host = @parse_url($_SERVER['HTTP_REFERER'], PHP_URL_HOST);
-<<<<<<< HEAD
 				$own_host = parse_url(config_item('base_url'), PHP_URL_HOST);
-=======
-				$own_host = parse_url((string) config_item('base_url'), PHP_URL_HOST);
->>>>>>> 4ac3e12faf0b0ddcad1091c595a68c1d1302375d
 
 				$this->referer = ($referer_host && $referer_host !== $own_host);
 			}

@@ -8,8 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
     <title>UKM Amikom</title>
 
@@ -63,8 +62,7 @@ https://templatemo.com/tm-563-seo-dream
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
                         <a href="<?php echo site_url('Dashboard') ?>" class="logo">
-                            <h4>UKM Amikom<img sty src="<?php echo base_url('assets/images/logo-ukm-mini.svg'); ?>"
-                                    alt=""></h4>
+                            <h4>UKM Amikom<img sty src="<?php echo base_url('assets/images/logo-ukm-mini.svg'); ?>" alt=""></h4>
                         </a>
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
@@ -92,8 +90,7 @@ https://templatemo.com/tm-563-seo-dream
                 <div class="col-lg-12">
                     <div class="row">
                         <div class="col-lg-6 align-self-center">
-                            <div class="left-content header-text wow fadeInLeft" data-wow-duration="1s"
-                                data-wow-delay="1s">
+                            <div class="left-content header-text wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
                                 <div class="row">
                                     <div class="col-lg-12">
                                         <h2>UKM Amikom</h2>
@@ -108,8 +105,7 @@ https://templatemo.com/tm-563-seo-dream
                         </div>
                         <div class="col-lg-6">
                             <div class="right-image wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
-                                <img src="<?php echo base_url('assets/fe/assets/images/banner-right-image.png') ?>"
-                                    alt="">
+                                <img src="<?php echo base_url('assets/fe/assets/images/banner-right-image.png') ?>" alt="">
                             </div>
                         </div>
                     </div>
@@ -130,9 +126,8 @@ https://templatemo.com/tm-563-seo-dream
                                 foreach ($rencana as $val) {
                                     $idr = $val->id_rencana;
                                     if ($key->id_rencana == $idr) { ?>
-                                        <div class="col-lg-3">
-                                            <div class="features-item second-feature last-features-item wow fadeInUp"
-                                                data-wow-duration="1s" data-wow-delay="0.6s">
+                                        <div class="col-lg-4">
+                                            <div class="features-item second-feature last-features-item wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s">
                                                 <div class="fourth-number number">
                                                     <h6>
                                                         <?php echo $no++; ?>
@@ -166,7 +161,7 @@ https://templatemo.com/tm-563-seo-dream
                                             </div>
                                         </div>
 
-                                    <?php }
+                            <?php }
                                 }
                             } ?>
                         </div>
@@ -183,8 +178,8 @@ https://templatemo.com/tm-563-seo-dream
             <div class="row">
                 <div class="col-lg-5">
                     <div class="section-heading wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.3s">
-                        <h6>Our Portofolio</h6>
-                        <h2>Discover Our Recent <em>Projects</em> And <span>Showcases</span></h2>
+                        <h6>Galery</h6>
+                        <h2>Temukan Pengalaman <em>Kamu</em> dan <span>Tunjukan Pada Kami</span></h2>
                     </div>
                 </div>
             </div>
@@ -196,8 +191,7 @@ https://templatemo.com/tm-563-seo-dream
                         <div class="item">
                             <div class="portfolio-item">
                                 <div class="thumb">
-                                    <img src="<?php echo base_url('assets/fe/assets/images/portfolio-01.jpg') ?>"
-                                        alt="">
+                                    <img src="<?php echo base_url('assets/fe/assets/images/Amikom-01.jpg') ?>" alt="">
                                     <div class="hover-content">
                                         <div class="inner-content">
                                             <a href="#">
@@ -210,8 +204,7 @@ https://templatemo.com/tm-563-seo-dream
                             </div>
                             <div class="portfolio-item">
                                 <div class="thumb">
-                                    <img src="<?php echo base_url('assets/fe/assets/images/portfolio-04.jpg') ?>"
-                                        alt="">
+                                    <img src="<?php echo base_url('assets/fe/assets/images/Amikom-04.jpg') ?>" alt="">
                                     <div class="hover-content">
                                         <div class="inner-content">
                                             <a href="#">
@@ -226,8 +219,7 @@ https://templatemo.com/tm-563-seo-dream
                         <div class="item">
                             <div class="portfolio-item">
                                 <div class="thumb">
-                                    <img src="<?php echo base_url('assets/fe/assets/images/portfolio-02.jpg') ?>"
-                                        alt="">
+                                    <img src="<?php echo base_url('assets/fe/assets/images/Amikom-02.jpg') ?>" alt="">
                                     <div class="hover-content">
                                         <div class="inner-content">
                                             <a href="#">
@@ -240,8 +232,7 @@ https://templatemo.com/tm-563-seo-dream
                             </div>
                             <div class="portfolio-item">
                                 <div class="thumb">
-                                    <img src="<?php echo base_url('assets/fe/assets/images/portfolio-05.jpg') ?>"
-                                        alt="">
+                                    <img src="<?php echo base_url('assets/fe/assets/images/Amikom-05.jpg') ?>" alt="">
                                     <div class="hover-content">
                                         <div class="inner-content">
                                             <a href="#">
@@ -256,8 +247,7 @@ https://templatemo.com/tm-563-seo-dream
                         <div class="item">
                             <div class="portfolio-item">
                                 <div class="thumb">
-                                    <img src="<?php echo base_url('assets/fe/assets/images/portfolio-03.jpg') ?>"
-                                        alt="">
+                                    <img src="<?php echo base_url('assets/fe/assets/images/Amikom-03.jpg') ?>" alt="">
                                     <div class="hover-content">
                                         <div class="inner-content">
                                             <a href="#">
@@ -270,8 +260,7 @@ https://templatemo.com/tm-563-seo-dream
                             </div>
                             <div class="portfolio-item">
                                 <div class="thumb">
-                                    <img src="<?php echo base_url('assets/fe/assets/images/portfolio-06.jpg') ?>"
-                                        alt="">
+                                    <img src="<?php echo base_url('assets/fe/assets/images/Amikom-06.jpg') ?>" alt="">
                                     <div class="hover-content">
                                         <div class="inner-content">
                                             <a href="#">
@@ -286,8 +275,7 @@ https://templatemo.com/tm-563-seo-dream
                         <div class="item">
                             <div class="portfolio-item">
                                 <div class="thumb">
-                                    <img src="<?php echo base_url('assets/fe/assets/images/portfolio-04.jpg') ?>"
-                                        alt="">
+                                    <img src="<?php echo base_url('assets/fe/assets/images/Amikom-04.jpg') ?>" alt="">
                                     <div class="hover-content">
                                         <div class="inner-content">
                                             <a href="#">
@@ -300,8 +288,7 @@ https://templatemo.com/tm-563-seo-dream
                             </div>
                             <div class="portfolio-item">
                                 <div class="thumb">
-                                    <img src="<?php echo base_url('assets/fe/assets/images/portfolio-01.jpg') ?>"
-                                        alt="">
+                                    <img src="<?php echo base_url('assets/fe/assets/images/Amikom-01.jpg') ?>" alt="">
                                     <div class="hover-content">
                                         <div class="inner-content">
                                             <a href="#">
@@ -335,37 +322,32 @@ https://templatemo.com/tm-563-seo-dream
                                 <div class="row">
                                     <div class="col-lg-6">
                                         <fieldset>
-                                            <input type="name" name="name" id="name" placeholder="Name"
-                                                autocomplete="on" required>
+                                            <input type="name" name="name" id="name" placeholder="Name" autocomplete="on" required>
                                         </fieldset>
                                     </div>
                                     <div class="col-lg-6">
                                         <fieldset>
-                                            <input type="surname" name="surname" id="surname" placeholder="Surname"
-                                                autocomplete="on" required>
+                                            <input type="surname" name="surname" id="surname" placeholder="Surname" autocomplete="on" required>
                                         </fieldset>
                                     </div>
                                     <div class="col-lg-6">
                                         <fieldset>
-                                            <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*"
-                                                placeholder="Your Email" required="">
+                                            <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email" required="">
                                         </fieldset>
                                     </div>
                                     <div class="col-lg-6">
                                         <fieldset>
-                                            <input type="subject" name="subject" id="subject" placeholder="Subject"
-                                                autocomplete="on">
+                                            <input type="subject" name="subject" id="subject" placeholder="Subject" autocomplete="on">
                                         </fieldset>
                                     </div>
                                     <div class="col-lg-12">
                                         <fieldset>
-                                            <textarea name="message" type="text" class="form-control" id="message"
-                                                placeholder="Message" required=""></textarea>
+                                            <textarea name="message" type="text" class="form-control" id="message" placeholder="Message" required=""></textarea>
                                         </fieldset>
                                     </div>
                                     <div class="col-lg-12">
                                         <fieldset>
-                                            <button type="submit" id="form-submit" class="main-button ">Send Message
+                                            <button type="submit" id="form-submit" class="main-button">Send Message
                                                 Now</button>
                                         </fieldset>
                                     </div>
@@ -376,22 +358,19 @@ https://templatemo.com/tm-563-seo-dream
                                     <ul>
                                         <li>
                                             <div class="icon">
-                                                <img src="<?php echo base_url('assets/fe/assets/images/contact-icon-01.png') ?>"
-                                                    alt="email icon">
+                                                <img src="<?php echo base_url('assets/fe/assets/images/contact-icon-01.png') ?>" alt="email icon">
                                             </div>
                                             <a href="#">info@company.com</a>
                                         </li>
                                         <li>
                                             <div class="icon">
-                                                <img src="<?php echo base_url('assets/fe/assets/images/contact-icon-02.png') ?>"
-                                                    alt="phone">
+                                                <img src="<?php echo base_url('assets/fe/assets/images/contact-icon-02.png') ?>" alt="phone">
                                             </div>
                                             <a href="#">+001-002-0034</a>
                                         </li>
                                         <li>
                                             <div class="icon">
-                                                <img src="<?php echo base_url('assets/fe/assets/images/contact-icon-03.png') ?>"
-                                                    alt="location">
+                                                <img src="<?php echo base_url('assets/fe/assets/images/contact-icon-03.png') ?>" alt="location">
                                             </div>
                                             <a href="#">26th Street, Digital Villa</a>
                                         </li>
@@ -409,10 +388,9 @@ https://templatemo.com/tm-563-seo-dream
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <p>Copyright © 2021 SEO Dream Co., Ltd. All Rights Reserved.
+                    <p>Sistem Informasi | Amikom Yogyakarta.
 
-                        <br>Web Designed by <a rel="nofollow" href="https://templatemo.com"
-                            title="free CSS templates">TemplateMo</a>
+                        <br><a rel="nofollow" href="https://kemahasiswaan.amikom.ac.id/" title="free CSS templates">Kemahasiswaan</a>
                     </p>
                 </div>
             </div>
